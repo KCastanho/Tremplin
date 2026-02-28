@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Étudiant - Tremplin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">m.</a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#entreprises">Entreprise</a></li>
+                <li><a href="formulaire-etudiant.html" class="active">Étudiants</a></li>
+                <li><a href="projets.html">Projets</a></li>
+            </ul>
+            <span class="nav-separator"></span>
+            <a href="profil.html" class="profile-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <section class="form-hero">
+        <div class="form-hero-content">
+            <div class="form-hero-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+            </div>
+            <h1>FORMULAIRE ÉTUDIANT</h1>
+            <p>Complétez votre profil pour trouver l'alternance de vos rêves dans le digital</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <h2>INFORMATIONS DU CANDIDAT</h2>
+            <p class="form-intro">Tous les champs marqués d'un astérisque (*) sont obligatoires</p>
+
+            <form class="student-form">
+                <!-- Section 1: Informations personnelles -->
+                <div class="form-block">
+                    <div class="form-block-header">
+                        <span class="block-number">1</span>
+                        <h3>INFORMATIONS PERSONNELLES</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Jean" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" placeholder="Dupont" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Formation -->
+                <div class="form-block">
+                    <div class="form-block-header">
+                        <span class="block-number">2</span>
+                        <h3>FORMATION</h3>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="ecole">École / Université *</label>
+                        <input type="text" id="ecole" name="ecole" placeholder="Université Paris-Saclay" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="niveau">Niveau d'études *</label>
+                            <select id="niveau" name="niveau" required>
+                                <option value="">Sélectionnez votre niveau</option>
+                                <option value="bac">Bac</option>
+                                <option value="bac+1">Bac+1</option>
+                                <option value="bac+2">Bac+2</option>
+                                <option value="bac+3">Bac+3</option>
+                                <option value="bac+4">Bac+4</option>
+                                <option value="bac+5">Bac+5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="diplome">Diplôme préparé *</label>
+                            <input type="text" id="diplome" name="diplome" placeholder="Master Digital Marketing" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Compétences et projet professionnel -->
+                <div class="form-block">
+                    <div class="form-block-header">
+                        <span class="block-number">3</span>
+                        <h3>COMPÉTENCES ET PROJET PROFESSIONNEL</h3>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="competences">Compétences principales *</label>
+                        <textarea id="competences" name="competences" rows="3" placeholder="Ex: React, Node.js, TypeScript, Design UX/UI, SEO, Google Analytics..." required></textarea>
+                        <span class="form-hint">Listez vos compétences techniques et outils maîtrisés</span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="poste">Type de poste recherché *</label>
+                        <select id="poste" name="poste" required>
+                            <option value="">Sélectionnez un type de poste</option>
+                            <option value="dev-web">Développeur Web</option>
+                            <option value="dev-mobile">Développeur Mobile</option>
+                            <option value="designer">Designer UX/UI</option>
+                            <option value="marketing">Marketing Digital</option>
+                            <option value="data">Data Analyst</option>
+                            <option value="chef-projet">Chef de Projet</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Section 4: Documents et présentation -->
+                <div class="form-block">
+                    <div class="form-block-header">
+                        <span class="block-number">4</span>
+                        <h3>DOCUMENTS ET PRÉSENTATION</h3>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="cv">CV *</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                        <span class="form-hint">Format accepté: PDF, DOC, DOCX (max 5 Mo)</span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="portfolio">Portfolio / LinkedIn (optionnel)</label>
+                        <input type="url" id="portfolio" name="portfolio" placeholder="https://monportfolio.com ou https://linkedin.com/in/...">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="motivation">Lettre de motivation *</label>
+                        <textarea id="motivation" name="motivation" rows="5" placeholder="Expliquez-nous pourquoi vous recherchez une alternance et quels sont vos objectifs professionnels..." required></textarea>
+                        <span class="form-hint">Minimum 200 caractères</span>
+                    </div>
+                </div>
+
+                <!-- Section 5: Statut étudiant -->
+                <div class="form-block">
+                    <div class="form-block-header">
+                        <span class="block-number">5</span>
+                        <h3>STATUT ÉTUDIANT</h3>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="cvec">Numéro CVEC *</label>
+                        <input type="text" id="cvec" name="cvec" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="certificat">Certificat de scolarité *</label>
+                        <input type="file" id="certificat" name="certificat" accept=".pdf,.doc,.docx" required>
+                        <span class="form-hint">Format accepté: PDF, DOC, DOCX (max 5 Mo)</span>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary">Sauvegarder le brouillon</button>
+                    <button type="submit" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Enregistrer le profil
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="success-modal">
+        <div class="success-modal-content">
+            <div class="success-checkmark">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h3>Profil enregistré avec succès !</h3>
+            <p>Vos informations ont été sauvegardées.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="footer-logo">tremplin.</h2>
+            </div>
+            <div class="footer-description">
+                <p>La plateforme qui connecte les étudiants et les entreprises pour des opportunités d'alternance dans le digital.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="18" cy="6" r="1"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="formulaire-etudiant.html">Formulaire</a></li>
+                    <li><a href="#">Projets</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@alternhub.fr">contact@alternhub.fr</a></li>
+                    <li>01 23 45 67 89</li>
+                    <li>Paris, France</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 tremplin. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

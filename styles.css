@@ -32,13 +32,13 @@ ul {
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 20px;
+    /* top: 20px; */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
     background: white;
     border-radius: 100px;
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
 }
 
@@ -536,7 +536,7 @@ ul {
 
 @media (max-width: 768px) {
     .navbar {
-        top: 10px;
+        /* top: 10px; */
         padding: 8px 15px;
     }
 
@@ -2458,12 +2458,12 @@ ul {
 .nav-links.mobile-active {
     display: flex !important;
     flex-direction: column;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: white;
+    /* background: white; */
     z-index: 1000;
     padding: 80px 30px 40px;
     gap: 12px;
@@ -2775,8 +2775,8 @@ ul {
 @media (max-width: 480px) {
     .navbar {
         top: 10px;
-        left: 10px;
-        right: 10px;
+        /* left: 10px;
+        right: 10px; */
         padding: 8px 12px;
     }
     
